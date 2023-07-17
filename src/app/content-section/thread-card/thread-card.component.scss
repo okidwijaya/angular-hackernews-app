@@ -1,0 +1,12 @@
+.thread-layout_wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    grid-template-rows: 1fr;
+    margin-bottom: 2rem;
+}
+
+.card-list_wrapper{
+    background-color: #F5F7FC;
+    padding-bottom: 2rem;
+}

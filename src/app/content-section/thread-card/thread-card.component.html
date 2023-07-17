@@ -1,0 +1,50 @@
+<div class="thread-layout_wrapper">
+  <div *ngFor="let item of items | slice: 0: 4">
+    <div class="card w-100 border-0">
+      <div class="card card-border-primary h-100 pb-2">
+        <div class="card-body border-0">
+          <h5 class="card-title pb-4" style="height: 80px;">{{ item.title }}</h5>
+          <p class="card-text w-100 border-bottom pb-2"> {{ item.score }} points by {{ item.by}} | <span
+              class="py-10">{{ extractDomain(item.url) }}</span>.</p>
+          <div class="d-flex justify-content-between align-self-center w-95">
+            <p class="my-0 d-flex align-self-center w-35 gap-3 justify-content-between">
+              <!-- {{ item.time | date }}  -->
+              {{ getTimeAgo(item.time) }}
+              <span *ngIf="item.score === findMaxScore()" class="tag primary-button py-0 px-2 rounded">Trending</span>
+            </p>
+            <button (click)="commentSelect(item, displayComment = true)"
+              class="btn btn-primary pull-right w-25 third-button border-0"><span>{{ item?.kids?.length }}</span>
+              comment</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card-list_wrapper">
+  <div *ngFor="let item of items | slice: 4: 8">
+    <div class="card border-0 w-100 mb-0">
+      <div class="card border-bottom border-0 rounded-0">
+        <div class="card-body border-0">
+          <h5 class="card-title pb-2">{{ item.title }}</h5>
+          <div class="d-flex justify-content-between align-self-center w-100">
+            <div class="d-flex justify-content-between w-100">
+              <p class="card-text pb-2 d-flex justify-content-between gap-2"> {{ item.score }} points by {{ item.by }} |
+                <span class="py-10">{{ extractDomain(item.url) }}</span> |
+                <span class="d-flex align-self-center">
+                  {{ getTimeAgo(item.time) }}
+                </span>
+                <span *ngIf="item.score === findMaxScoreStory()"
+                  class="tag primary-button py-0 px-2 rounded">Trending</span>
+              </p>
+            </div>
+            <button (click)="commentSelect(item, displayComment = true)"
+              class="btn btn-primary pull-right w-25 h-25 third-button border-0"><span>{{ item?.kids?.length }}</span>comment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

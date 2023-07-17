@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.primary-button{
+    background-color: #FF6600;
+}
+
+.third-button{
+    background-color: #FFEADC;
+    color: #FF6600;
+}
+
+.card-border-primary{
+    border: 1px solid #FF6600;
+}
+
+.tag{
+    color: #FFF;
+    background-color: #FF8780;
+}
+
+body{
+    background-color: #F5F7FC;
+}
+

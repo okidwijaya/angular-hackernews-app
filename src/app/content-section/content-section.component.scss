@@ -1,0 +1,27 @@
+hc-thread-card{
+    background-color: #F5F7FC;
+}
+.hideCard {
+    display: none;
+}
+
+.showCard {
+    display: block;
+}
+
+.close-button_popup{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    background-color: white;
+}
+
+.modal_comment{
+    font-size: 1em;
+    font-weight: 600;
+    color: #242424;
+    text-align: right;
+}

@@ -1,0 +1,20 @@
+<hc-spinner [ngStyle]="{'display' : kidsitemsModal.length > 0 ? 'none' : 'block'}"></hc-spinner>
+<!-- <div *ngIf="kidsitemsModal">data ada</div> -->
+<div class="jw-modal">
+    <div class="jw-modal-body">
+        <ng-content></ng-content>
+        <div class="modal-comment_wrap">
+        <div *ngIf="kidsitemsModal">
+            <div *ngFor="let kidscomments of kidsitemsModal">
+                <div class="modal-comment_card">
+                    <div class="modal-comment_content">
+                    <p class="modal-comment_user">{{ kidscomments.by }}</p>
+                        <p class="modal-comment_content-text">{{ kidscomments.text}}</p>
+                    </div>
+                    <div class="modal-comment_date">{{ getTimeAgo(kidscomments.time) }}</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
